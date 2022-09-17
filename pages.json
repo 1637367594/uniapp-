@@ -1,0 +1,85 @@
+{
+	"easycom": {
+	    "^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "test", //模式名称
+			"path": "pages/tabbar/home/index", //启动页面，必选
+			"query": "uuid=c4bba940-f69e-11ea-a419-6bafda9d095e&__id__=1" //启动参数，在页面的onLoad函数里面得到
+		}]
+	},
+	"pages": [
+		{
+			"path": "pages/tabbar/home/index",
+			"style": {
+				"navigationStyle": "custom", //关闭自带导航
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": false, //是否开启下拉功能
+				"backgroundColor": "#000000" 
+			},
+			"app-plus": {
+				"titleNView": false
+			}
+		},
+        {
+			"path": "pages/tabbar/fd/fd",
+			"style": {
+				"navigationStyle": "custom", //关闭自带导航
+				"navigationBarTitleText": "福袋",
+				"enablePullDownRefresh": false, //是否开启下拉功能
+				"backgroundColor": "#000000" 
+			},
+			"app-plus": {
+				"titleNView": false
+			}
+		},
+        {
+			"path": "pages/tabbar/my/index",
+			"style": {
+				"navigationStyle": "custom", //关闭自带导航
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false, //是否开启下拉功能
+				"backgroundColor": "#000000" 
+			},
+			"app-plus": {
+				"titleNView": false
+			}
+		}
+    ],
+	"subPackages": [],
+	"preloadRule": {},
+	"globalStyle": {
+		"navigationBarTitleText": "uView",
+		"navigationBarBackgroundColor": "#171717",
+		"backgroundColor": "#171717"
+	},
+	"tabBar": {
+		"color": "#BEBEBE",
+		"selectedColor": "#1C1B1F",
+		"backgroundColor": "#f9f9f9",
+		"borderStyle": "black",
+		"height": "60px",
+		"list": [
+			{
+				"pagePath": "pages/tabbar/home/index",
+				"iconPath": "static/images/tabbar/Union.png",
+				"selectedIconPath": "static/images/tabbar/Union1.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabbar/fd/fd",
+				"iconPath": "static/images/tabbar/fud.png",
+				"selectedIconPath": "static/images/tabbar/fd.png",
+				"text": "福袋"
+			},
+			{
+				"pagePath": "pages/tabbar/my/index",
+				"iconPath": "static/images/tabbar/Vector.png",
+				"selectedIconPath": "static/images/tabbar/Vector2.png",
+				"text": "我的"
+			}
+		]
+	}
+}

@@ -1,0 +1,91 @@
+page{
+	// 全局页面背景颜色
+    background-color: #fff;
+}
+
+//动画时间
+$animation-time: 1s;
+
+/* 加载动画 */
+.animation-opacity {
+    animation: MoveOpacity $animation-time;
+    animation-fill-mode: forwards;
+}
+
+.animation-bottom {
+    animation: MoveBottom $animation-time;
+    animation-fill-mode: forwards;
+}
+
+.animation-top {
+    animation: MoveTop $animation-time;
+    animation-fill-mode: forwards;
+}
+
+.animation-left {
+    animation: MoveLeft $animation-time;
+    animation-fill-mode: forwards;
+}
+
+.animation-right {
+    animation: MoveRight $animation-time;
+    animation-fill-mode: forwards;
+}
+
+@keyframes MoveOpacity {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes MoveBottom {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 50px, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes MoveTop {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -50px, 0);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes MoveLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-50px, 0, 0);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes MoveRight {
+        0% {
+			opacity: 0;
+			transform: translate3d(50px, 0, 0);
+        }
+        
+        100% {
+			opacity: 1;
+			transform: none;
+        }
+}
